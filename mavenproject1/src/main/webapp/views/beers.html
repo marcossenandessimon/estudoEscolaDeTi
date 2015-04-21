@@ -1,0 +1,22 @@
+<div ng-init="init()">
+    <a href="#/manter-beers">Adicionar</a>
+    <br>
+    <table>
+        <thead>
+            <th>Nome</th>
+            <th>Teor Alcoólico<th>
+            <th>Ações</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="beer in beers">
+                <td>{{beer.nome}}</td>
+                <td>{{beer.teorAlcolico}}</td>
+                <td>
+                    <a href="#/manter-beers/{{beer.id}}">Editar</a>
+                    <a ng-click="delete(beer.id)">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+        {{beers}}
+    </table>
+</div>
